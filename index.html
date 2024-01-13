@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xeauk JS | Enhanced JavaScript Templating</title>
+    <meta name="description" content="Xeauk JS is a lightweight and minimal JavaScript web templating engine">
+    <meta name="og:description" content="Xeauk JS is a lightweight and minimal JavaScript web templating engine">
+    <meta name="keywords" content="xeauk js, xeauk">
+    <meta name="author" content="Xeauk JS | Enhanced JavaScript Templating">
+    <meta name="robots" content="index, follow">
+    <meta name="og:title" content="Xeauk JS | Enhanced JavaScript Templating">
+    <meta name="og:image" content=""> 
+    <meta name="og:url" content="">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <style>
+        :root{
+            --theme:  #202020;;
+        }
+        html{
+            scroll-behavior: smooth !important;
+        }
+        body{
+            font-family: Arial, Helvetica, sans-serif !important;
+            overflow-x: hidden !important;
+            letter-spacing: .3px !important;
+        }
+        .jumbotron{
+            background-color: #f9f9f9 !important;
+        }
+        h1{
+            font-size: 75px;
+            font-weight: 800;
+            color: var(--theme);
+        }
+        .text-theme{
+            color: var(--theme) !important;
+        }
+        .p1{
+            color: var(--theme);
+        }
+        p{
+            font-size: .8rem !important;
+        }
+        ol{
+            font-size: .8rem !important;
+        }
+        label{
+            font-size: .8rem !important;
+        }
+        button{
+            width: 200px !important;
+            border-radius: 11px !important;
+            padding: .65rem !important;
+            background-color: var(--theme) !important;
+            border: none !important;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px  !important;;
+        }
+        input{
+            height: 2.5rem !important;
+        }
+        code{
+            padding: 0.15rem 0.3rem;
+        }
+    </style>
+</head>
+<body xController="xApp">
+
+    <div class="jumbotron">
+        <div class="container">
+            <h1>Xeauk JS</h1>
+            <p class="p1">Xeauk JS is a lightweight and minimal JavaScript web templating engine</p>
+            <button>
+                View on Github
+            </button>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row mt-3">
+            <div class="col-lg-6">
+                <h4 class="text-theme">Introduction</h4>
+                <p>
+                    Welcome to Xeauk JS. Xeauk JS brings the power <br>
+                    of JavaScript directly in your HTML. <br>
+                    No more writing complicated codes to bind variables to HTML. 
+                </p>
+                <p>
+                    On top of templating, Xeauk JS allows you to write <br>
+                    JavaScript expression directly inside the <code>@{}</code> <br>
+                    template. <br>
+                </p>
+
+                <h4 class="text-theme">Installation</h4>
+                <p>
+                    We recommend using the CDN (Content Delivery Network) version.
+                </p>
+                <label for="cdnLink">CDN link</label>
+                <input type="text" name="cdnLink"
+                readonly
+                style="font-size: 14px;"
+                value='<script src="https://cdn.jsdelivr.net/gh/iskevinlemon/xeauk-js/src/xeauk.js"></script>'
+                >
+            </div>
+            <div class="col-lg-6">
+                <script src="https://gist.github.com/iskevinlemon/a6a252f441cc809ba37e302720d01b91.js"></script>
+            </div>
+        </div>
+    </div>
+
+    <hr></hr>
+    <div class="container">
+        <div class="row mt-3">
+            <div class="col-lg-6">
+                <h4 class="text-theme">Setting up</h4>
+                <b>HTML</b>
+                <ol>
+                    <li>Ensure you have added the script to <code>xeauk.js</code> (via CDN/ local)</li>
+                    <li>Add an attribute tag of <code>xController</code> to the <code>body</code> tag</li>
+                    <li>Set the name for <code>xController</code></li>
+                </ol>
+                <b>JavaScript</b>
+                <ol>
+                    <li>Get an instance of Xeauk</li>
+                    <li>Set the scope of templating</li>
+                    <li>Define a variable</li>
+                    <li>Bind the variable in the HTML/li>
+                    <li>Compile the templating engine</li>
+                </ol>
+            </div>
+            <div class="col-lg-6">
+                <script src="https://gist.github.com/iskevinlemon/ac460f19e283163ca9bd876152d19a3d.js"></script>
+            </div>
+        </div>
+    </div>
+
+    <hr></hr>
+    <div class="container mb-5">
+        <div class="row mt-3">
+            <div class="col-lg-6">
+                <h4 class="text-theme">JavaScript expression</h4>
+                <p>
+                    Write JavaScript expression directly in HTML<br>
+                    E.g. displaying a computation, random numbers <br>
+                    or even displaying the current date time in real time
+                </p>
+            </div>
+            <div class="col-lg-6">
+                <script src="https://gist.github.com/iskevinlemon/7b5c595bd23bb856424fb36faaaf3d19.js"></script>
+            </div>
+        </div>
+    </div>
+
+    <hr></hr>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+    $(document).ready(function(){
+        $("button").click(function(){
+            window.location.href = "https://github.com/iskevinlemon/xeauk-js";
+        });
+    });
+    </script>
+</body>
+</html>
