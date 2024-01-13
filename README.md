@@ -1,5 +1,8 @@
 # Xeauk JS
-Enhanced JavaScript Templating
+Welcome to Xeauk JS. Xeauk JS brings the power of JavaScript directly in your HTML.
+No more writing complicated codes to bind variables to HTML.
+<br>
+On top of templating, Xeauk JS allows you to write JavaScript expression directly inside the @{} template.
 <br/>
 
 # Installation via CDN
