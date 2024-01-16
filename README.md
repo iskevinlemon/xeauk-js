@@ -1,4 +1,6 @@
 # Xeauk JS
+<img width="1469" alt="image" src="https://github.com/iskevinlemon/xeauk-js/assets/126497052/e46e43c2-2a3d-4eca-9946-e3fcdaf005ae">
+
 Welcome to Xeauk JS. Xeauk JS brings the power of JavaScript directly in your HTML.
 No more writing complicated codes to bind variables to HTML.
 <br>
