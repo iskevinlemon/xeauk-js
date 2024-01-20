@@ -26,7 +26,7 @@ SOFTWARE.
 
 // Xeauk is is adapted from SuperHTML project which has sunset.
 
-console.log("X11.js");
+console.log("x11.js");
 (function ($SuperHTML) {
   var superHTMLController;
 
