@@ -1,7 +1,7 @@
 /**
 Xeauk JS | Enhanced JavaScript Templating
 Created by: Kevin (https://github.com/iskevinlemon)
-Version: 1.0
+Version: 1.1 - January 2024
 
 MIT License - Copyright (c) 2024
 
@@ -26,6 +26,7 @@ SOFTWARE.
 
 // Xeauk is is adapted from SuperHTML project which has sunset.
 
+console.log("X11.js");
 (function ($SuperHTML) {
   var superHTMLController;
 
@@ -38,7 +39,7 @@ SOFTWARE.
     },
 
     // @param {object} options - data to bind
-    compile: function (options) {
+    compile: function (options, templatingSyntax) {
       // Ensure the document body exists
       if (!document.body) {
         console.error("Error: Document body not found.");
@@ -60,6 +61,20 @@ SOFTWARE.
         console.error("Error: Xeauk controller is not defined");
       }
 
+      // New - user defined tempalating
+      var xSyntax = templatingSyntax.option;
+      var xExpression = /\@\{([^}]+)\}/g; // Default referencing by @{variable}
+
+      // referencing by {{variable}}
+      if (xSyntax == "{{}}"){
+        xExpression = /\{\{([^}]+)\}\}/g;
+      }
+
+      // referencing by ${variable}
+      if (xSyntax == "${}"){
+        xExpression = /\$\{([^}]+)\}/g;
+      }
+
       /**
        * Only run the templating and js scripts if controller is
        * correctly defined
@@ -72,7 +87,7 @@ SOFTWARE.
 
         // Replace data placeholders and evaluate JavaScript expressions in the template
         const compiledHTML = bodyContent.replace(
-          /\@\{([^}]+)\}/g, // referencing by @{variable}
+            xExpression, 
           (match, expression) => {
             try {
               if (data.hasOwnProperty(expression)) {
