@@ -1,7 +1,8 @@
 /**
 Xeauk JS | Enhanced JavaScript Templating
 Created by: Kevin (https://github.com/iskevinlemon)
-Version: 1.1 - January 2024
+Version: x11 - January 2024
+Note: x11.js is a stable build of xeauk.js
 
 MIT License - Copyright (c) 2024
 
@@ -26,7 +27,7 @@ SOFTWARE.
 
 // Xeauk is is adapted from SuperHTML project which has sunset.
 
-console.log("x11.js");
+console.log("Version x11.js");
 (function ($SuperHTML) {
   var superHTMLController;
 
